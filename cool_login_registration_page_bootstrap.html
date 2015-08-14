@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cool login or registration page bootstrap</title>
+    <!-- Bootstrap -->
+    <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.3.4/superhero/bootstrap.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .col-center-block {
+            float: none;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        html,
+        body,
+        .container {
+            height: 100%;
+            width: 100%;
+        }
+
+        .container {
+            display: table;
+            vertical-align: middle;
+        }
+
+        .vertical-center-row {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .login-screen-bg {
+            background-color: #EFEFEF;
+        }
+
+        .panel-git {
+            border: 1px solid #d8dee2;
+        }
+
+            .panel-git h3 {
+                color: #fff;
+            }
+
+            .panel-git .panel-heading {
+                background-color: #829AA8;
+            }
+
+        .login-widget {
+            padding: 15px;
+            -moz-box-shadow: 0px 0px 1px 1px rgba(161, 159, 159, 0.1);
+            -webkit-box-shadow: 0px 0px 1px 1px rgba(161, 159, 159, 0.1);
+            box-shadow: 0px 0px 1px 1px rgba(161, 159, 159, 0.1);
+            background-color: #FFF;
+        }
+
+        .login .modal-footer {
+            border-top: 0;
+            margin-top: 0px;
+            padding: 10px 20px 20px;
+        }
+
+        .login .modal-header {
+            border: 0 none;
+            padding: 15px 15px 15px;
+        }
+
+        .login .modal-body {
+            background-color: #485563;
+            color: #FFF;
+        }
+
+        .login .division {
+            float: none;
+            margin: 0 auto 18px;
+            overflow: hidden;
+            position: relative;
+            text-align: center;
+            width: 100%;
+        }
+
+            .login .division .line {
+                border-top: 1px solid #DFDFDF;
+                position: absolute;
+                top: 10px;
+                width: 34%;
+            }
+
+                .login .division .line.l {
+                    left: 0;
+                }
+
+                .login .division .line.r {
+                    right: 0;
+                }
+
+            .login .division span {
+                color: #FFF;
+                font-size: 17px;
+            }
+
+        .login .box .social {
+            float: none;
+            margin: 0 auto 30px;
+            text-align: center;
+        }
+
+        .login .social .circle {
+            background-color: #EEEEEE;
+            color: #FFFFFF;
+            -moz-border-radius: 100px;
+            -webkit-border-radius: 100px;
+            border-radius: 100px;
+            display: inline-block;
+            margin: 0 17px;
+            padding: 15px;
+        }
+
+            .login .social .circle .fa {
+                font-size: 16px;
+            }
+
+        .login .social .facebook {
+            background-color: #455CA8;
+            color: #FFFFFF;
+        }
+
+        .login .social .google {
+            background-color: #F74933;
+        }
+
+        .login .social .github {
+            background-color: #403A3A;
+        }
+
+        .login .facebook:hover {
+            background-color: #6E83CD;
+        }
+
+        .login .google:hover {
+            background-color: #FF7566;
+        }
+
+        .login .github:hover {
+            background-color: #4D4D4d;
+        }
+
+        .login .forgot {
+            color: #FFF;
+            margin-left: 0;
+            overflow: hidden;
+            text-align: center;
+            width: 100%;
+        }
+
+        .login .btn-login, .registerBox .btn-register {
+            background-color: #00BBFF;
+            border-color: #00BBFF;
+            border-width: 0;
+            color: #FFFFFF;
+            display: block;
+            margin: 0 auto;
+            padding: 15px 50px;
+            text-transform: uppercase;
+            width: 100%;
+        }
+
+            .login .btn-login:hover, .registerBox .btn-register:hover {
+                background-color: #00A4E4;
+                color: #FFFFFF;
+            }
+
+        .login .form-control {
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            background-color: rgba(0, 0, 0, 0.09);
+            -moz-box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.09) inset;
+            -webkit-box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.09) inset;
+            box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.09) inset;
+            color: #FFFFFF;
+        }
+
+            .login .form-control:hover {
+                background-color: rgba(0,0,0,.16);
+            }
+
+            .login .form-control:focus {
+                -moz-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset;
+                -webkit-box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset;
+                box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.04) inset;
+                background-color: rgba(0,0,0,0.23);
+                color: #FFFFFF;
+            }
+
+        .login .box .form input[type="text"], .login .box .form input[type="password"] {
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            border: none;
+            color: #333333;
+            font-size: 16px;
+            height: 46px;
+            margin-bottom: 5px;
+            padding: 13px 12px;
+            width: 100%;
+        }
+
+
+        .big-login, .big-register {
+            background-color: #00bbff;
+            color: #FFFFFF;
+            -moz-border-radius: 7px;
+            -webkit-border-radius: 7px;
+            border-radius: 7px;
+            border-width: 2px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 200;
+            padding: 16px 60px;
+            text-transform: uppercase;
+            -moz-transition: all 0.3s ease 0s;
+            -o-transition: all 0.3s ease 0s;
+            -webkit-transition: all 0.3s ease 0s;
+            transition: all 0.3s ease 0s;
+        }
+
+            .big-login:hover {
+                background-color: #00A4E4;
+                color: #FFFFFF;
+            }
+
+        .big-register {
+            background-color: rgba(0,0,0,.0);
+            color: #00bbff;
+            border-color: #00bbff;
+        }
+
+            .big-register:hover {
+                border-color: #00A4E4;
+                color: #00A4E4;
+            }
+    </style>
+    <!-- http://www.jquery2dotnet.com/ -->
+    <!-- http://jquery2dotnet.github.io/ -->
+</head>
+<body class="login-screen-bg login">
+    <div class="container">
+        <div class="row vertical-center-row">
+            <div class="col-md-4 col-center-block login-widget">
+                <div>
+                    <div class="modal-header">
+                        <h4 class="modal-title">Login with</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="box">
+                            <div class="content">
+                                <div class="social">
+                                    <a class="circle github" href="javascript:void(0)">
+                                        <i class="fa fa-github fa-fw"></i>
+                                    </a>
+                                    <a id="google_login" class="circle google" href="javascript:void(0)">
+                                        <i class="fa fa-google-plus fa-fw"></i>
+                                    </a>
+                                    <a id="facebook_login" class="circle facebook" href="javascript:void(0)">
+                                        <i class="fa fa-facebook fa-fw"></i>
+                                    </a>
+                                </div>
+                                <div class="division">
+                                    <div class="line l"></div>
+                                    <span>or</span>
+                                    <div class="line r"></div>
+                                </div>
+                                <div class="error"></div>
+                                <div class="form loginBox" style="display: block;">
+                                    <form method="post" action="#">
+                                        <input id="email" class="form-control" type="text" placeholder="Email" name="email">
+                                        <input id="password" class="form-control" type="password" placeholder="Password" name="password">
+                                        <input class="btn btn-default btn-login" type="submit" value="Login">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box">
+                            <div class="content registerBox" style="display: none;">
+                                <div class="form">
+                                    <form method="post" action="#">
+                                        <input id="Text1" class="form-control" type="text" placeholder="Email" name="email">
+                                        <input id="password1" class="form-control" type="password" placeholder="Password" name="password">
+                                        <input id="password_confirmation" class="form-control" type="password" placeholder="Repeat Password" name="password_confirmation">
+                                        <input class="btn btn-default btn-register" type="submit" value="Create account" name="commit">
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <div class="forgot login-footer" style="display: block;">
+                            <span>Looking to 
+                                 <a href="javascript: showRegisterForm();">create an account</a>
+                                ?</span>
+                        </div>
+                        <div class="forgot register-footer" style="display: none;">
+                            <span>Already have an account?</span>
+                            <a href="javascript: showLoginForm();">Login</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-center-block">
+                <script async src="http://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- res_CodeSearch -->
+                <ins class="adsbygoogle"
+                    style="display: block"
+                    data-ad-client="ca-pub-3344653884085038"
+                    data-ad-slot="5911973767"
+                    data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <!--<script src="http://cdn.jsdelivr.net/bootstrap/3.3.4/js/bootstrap.min.js"></script>-->
+    <script>
+        function showRegisterForm() {
+            $('.loginBox').fadeOut('fast', function () {
+                $('.registerBox').fadeIn('fast');
+                $('.login-footer').fadeOut('fast', function () {
+                    $('.register-footer').fadeIn('fast');
+                });
+                $('.modal-title').html('Register with');
+            });
+            $('.error').removeClass('alert alert-danger').html('');
+
+        }
+        function showLoginForm() {
+            $('.registerBox').fadeOut('fast', function () {
+                $('.loginBox').fadeIn('fast');
+                $('.register-footer').fadeOut('fast', function () {
+                    $('.login-footer').fadeIn('fast');
+                });
+
+                $('.modal-title').html('Login with');
+            });
+            $('.error').removeClass('alert alert-danger').html('');
+        }
+    </script>
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+        ga('create', 'UA-46102911-5', 'auto');
+        ga('send', 'pageview');
+    </script>
+</body>
+</html>
